@@ -52,16 +52,19 @@ cleanwin:
 # 'all' needs 'story.o'. What does story need?
 # And how do we make it?
 # -----------------------------------------------
-story.o: story.o bpbkt7.o 
+story.o: story.o bpbkt7.o jslct5.o
 	$(CC) -c $^
 
 ##
 
-#story.o: story.c 
+#story.o: story.c
 
 # -----------------------------------------------
 #pawprint.o -  where is your .c derived object file - where is your file
 bpbkt7.o: sentences/bpbkt7.c
+	$(CC) -c $<
+
+jslct5.o: sentences/jslct5.c
 	$(CC) -c $<
 
 
